@@ -15,31 +15,34 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <Button
+        <ImageButton
             android:id="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="#FA0606"
+            android:background="#FFFFFF"
             android:onClick="onTopBtnClicked"
-            android:text="TOP" />
+            android:src="@drawable/eagle_image"
+            android:textColor="#FFFFFF" />
 
-        <Button
+        <ImageButton
             android:id="@+id/middle"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#08F412"
             android:onClick="onMiddleBtnClicked"
+            android:src="@drawable/moby_image"
             android:text="MIDDLE" />
 
-        <Button
+        <ImageButton
             android:id="@+id/bottom"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:background="#2196F3"
             android:onClick="onBottomBtnClicked"
+            android:src="@drawable/sailor_image"
             android:text="BOTTOM" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

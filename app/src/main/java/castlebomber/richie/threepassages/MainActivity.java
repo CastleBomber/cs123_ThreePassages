@@ -22,26 +22,26 @@ public class MainActivity extends AppCompatActivity {
         setContentView(ui.getRoot());
     }
 
+    // Goes to link
     public void onTopBtnClicked(View v){
-        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.gutenberg.org/cache/epub/2489/pg2489-images.html"));
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("BOOK_NAME", "The Eagle's Shadow");
+        intent.putExtra("BOOK_FILENAME", "eagle.txt");
         startActivity(intent);
-
-        //String message = "top unlocked";
-        //Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
 
     public void onMiddleBtnClicked(View v){
-        String message = "middle unlocked";
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("BOOK_NAME", "Moby Dick");
+        intent.putExtra("BOOK_FILENAME", "moby.txt");
+        startActivity(intent);
     }
+
 
     public void onBottomBtnClicked(View v){
-        String message = "bottom unlocked";
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-    }
-
-    public void onCancelClicked(View v){
-        //ui.ratingBar.setRating(0);
-        //ui.comment.setText("");
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.putExtra("BOOK_NAME", "The Sailor");
+        intent.putExtra("BOOK_FILENAME", "sailor.txt");
+        startActivity(intent);
     }
 }
